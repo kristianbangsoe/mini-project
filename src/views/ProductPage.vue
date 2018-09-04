@@ -67,11 +67,11 @@
           </div>
           <form class="mt-2">
             <div class="form-elements d-flex">
-              <div class="form-elements__form-item mr-1">
+              <div class="form-elements__form-item">
                 <label for="color" class="uppercase h1">Color</label>
                 <div class="styled-select">
-                  <select name="color">
-                    <option selected disabled value="0">Select Colour</option>
+                  <select name="color ">
+                    <option selected disabled value="0">Color</option>
                     <option value="">Red</option>
                     <option value="">Blue</option>
                     <option value="">Black</option>
@@ -80,41 +80,32 @@
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </div>
-              <div class="form-elements__form-item mr-1">
-                <label for="size" class="uppercase h1">Size</label>
+              <div class="form-elements__form-item">
+                <label for="color" class="uppercase h1">Color</label>
                 <div class="styled-select">
-                  <select name="size">
-                    <option selected disabled value="0">Select Size</option>
-                    <option value="">XS (27)</option>
-                    <option value="">S (30)</option>
-                    <option value="">M (32)</option>
-                    <option value="">XL (35)</option>
-                    <option value="">XXL (40)</option>
+                  <select name="color">
+                    <option selected disabled value="0">Color</option>
+                    <option value="">Red</option>
+                    <option value="">Blue</option>
+                    <option value="">Black</option>
+                    <option value="">White</option>
                   </select>
                   <span class="fas fa-chevron-down"></span>
                 </div>
               </div>
               <div class="form-elements__form-item">
-                <label for="qty" class="uppercase h1">Qty</label>
+                <label for="color" class="uppercase h1">Color</label>
                 <div class="styled-adder d-flex">
                   <p>{{ counter }}</p>
                   <div>
-                    <button v-on:click.prevent="counter += 1" name="button"><i class="fas fa-chevron-up"></i></button>
-                    <button v-on:click.prevent="counter -= 1" name="button"><i class="fas fa-chevron-down"></i></button>
+                    <button v-on:click.prevent="counter += 1" name="button">+</button>
+                    <button v-on:click.prevent="counter -= 1" name="button">-</button>
                   </div>
                 </div>
               </div>
             </div>
-            <input name="qty" hidden v-model="counter">
-            <div class="form-elements__form-item mt-2">
-              <button class="btn bg-cyan"><i class="fas fa-shopping-cart"></i> ADD TO CART</button>
-              <button class="btn btn-border ml-2"><i class="far fa-heart"></i> ADD TO COLLECTION</button>
-            </div>
-            <div class="compare-el">
-              <button type="button" name="button"><div class="icon compare"></div> ADD TO COMPARE</button>
-            </div>
+            <input hidden v-model="counter">
           </form>
-
         </div>
 
       </div>
@@ -124,32 +115,22 @@
 
 <script>
 export default {
+  mounted() {
+    var element = document.getElementById("header");
+    element.classList.add("bg-white");
+  },
   name: 'ProductPage',
   tab: 1,
   data () {
     return {
       heroImage: 'static/images/banner.jpg',
       productId: 6,
-      counter: 1,
+      counter: 0,
       productName: 'Ave Classic Sweatshirt',
       productImage: 'static/images/products/product-6.jpg',
       quantity: 6,
       description: 'Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.',
       price: 89,
-      size: [
-        { size: 'XS' },
-        { size: 'S' },
-        { size: 'M' },
-        { size: 'L' },
-        { size: 'XL' },
-        { size: 'XXL' }
-      ],
-      colors: [
-        { size: 'Red' },
-        { size: 'White' },
-        { size: 'Black' },
-        { size: 'Blue' }
-      ],
       oldPrice: 100,
       onSale: false,
       items: [
@@ -161,11 +142,7 @@ export default {
       ],
       productCode: 499577,
     }
-  },
-  mounted() {
-    var element = document.getElementById("header");
-    element.classList.add("bg-white");
-  },
+  }
 }
 
 

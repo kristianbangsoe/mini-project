@@ -1,0 +1,208 @@
+[
+	{
+		"id" : 1,
+		"productName" : "Pants",
+		"productImage" : "static/images/products/product-1.jpg",
+		"productGallery" : null,
+		"quantity" : 1,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 200,
+		"oldPrice" : null,
+		"onSale" : false,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	},
+   {
+		"id" : 2,
+		"productName" : "Shirts",
+		"productImage" : "static/images/products/product-2.jpg",
+		"productGallery" : "static/images/products/product-2.jpg",
+		"quantity" : 1,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 900,
+		"oldPrice" : 1200,
+		"onSale" : true,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	},
+   {
+		"id" : 3,
+		"productName" : "Shoes",
+		"productImage" : "static/images/products/product-3.jpg",
+		"quantity" : 2,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 100,
+		"oldPrice" : null,
+		"onSale" : false,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	},
+   {
+		"id" : 4,
+		"productName" : "Hats",
+		"productImage" : "static/images/products/product-4.jpg",
+		"quantity" : 6,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 100,
+		"oldPrice" : null,
+		"onSale" : false,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	},
+   {
+		"id" : 5,
+		"productName" : "Hats",
+		"productImage" : "static/images/products/product-5.jpg",
+		"quantity" : 6,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 100,
+		"oldPrice" : null,
+		"onSale" : false,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	},
+	{
+		"id" : 6,
+		"productName" : "Hats",
+		"productImage" : "static/images/products/product-6.jpg",
+		"quantity" : 6,
+		"description" : "Lorem Ipsum er ganske enkelt fyldtekst fra print- og typografiindustrien.",
+		"price" : 100,
+		"oldPrice" : null,
+		"onSale" : false,
+		"size": {
+			 "size": "XS",
+			 "size": "S",
+			 "size": "M",
+			 "size": "L",
+			 "size": "XL",
+			 "size": "XXL"
+		 },
+		"colors": {
+			 "size": "Red",
+			 "size": "White",
+			 "size": "Black",
+			 "size": "Blue"
+		 },
+		"oldPrice": 100,
+		"onSale": false,
+		"items": {
+			 "tag": "classic",
+			 "tag": "casual",
+			 "tag": "hoodies",
+			 "tag": "v-neck",
+			 "tag": "loose"
+		 },
+		"productCode": 499577
+	}
+]

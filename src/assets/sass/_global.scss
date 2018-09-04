@@ -1,0 +1,362 @@
+
+
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+	box-sizing: border-box;
+	overflow-x: hidden;
+}
+
+hr{
+    border: 0.5px solid #ececec;
+}
+
+.container{
+	width: 1252px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.container-s{
+	width: 1100px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.show{
+	background-color: white;
+	box-shadow: 17px 0px 24px #00000024;
+}
+
+// Navigaion
+
+.navbar-nav {
+    list-style-type: none;
+    display: flex;
+    li{
+			margin-left: 60px;
+			line-height: 31px;
+      a{
+				text-transform: uppercase;
+				font-size: 13px;
+				font-weight: 300;
+        text-decoration: none;
+        color: $primary-color;
+        transition: 0.4s;
+
+        &:hover{
+          color: $main-color;
+        }
+      }
+			.nav-link{
+				.fa-angle-down {
+						position: absolute;
+						margin-top: 27px;
+						z-index: 1;
+				}
+			}
+			.sub-container{
+				display: none;
+				position: absolute;
+				padding-top: 18px;
+			}
+			.sub-cat{
+				box-shadow: 0 17px 24px #00000024;
+				background-color: white;
+				.sub-cat__sub-item{
+					padding: 20px 30px;
+					p{
+						font-size: 13px;
+						font-weight: 300;
+					}
+					ul{
+						list-style-type: none;
+						li{
+							margin-left: 0;
+							a{
+								font-weight: 400;
+							}
+						}
+					}
+				}
+				.shop-banner {
+			    height: 150px;
+			    width: calc(100% - 60px);
+			    background-position: center;
+			    background-size: cover;
+			    margin: 0 30px 20px 30px;
+					display: inline-block;
+				}
+
+			}
+    }
+		.nav-item:hover .sub-container{
+			display: block;
+			a{
+				width: 100%;
+				height: 100%;
+				display: inline-block;
+			}
+		}
+}
+
+.navbar-brand {
+	img{
+		width: 170px;
+	}
+}
+
+// Hero – Section 1
+header {
+    position: fixed;
+    width: 100%;
+		z-index: 99;
+	  transition: 0.5s;
+}
+
+
+
+#hero{
+  background-color: #f8f8f8;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 548px;
+	background-position: 100px 0;
+  display: flex;
+	flex-direction: column;
+  align-items: center;
+	padding-top: 150px;
+	p{
+		height: 400px;
+		font-size: 316.07px;
+		font-weight: bold;
+		color: $brown-gray;
+	}
+}
+
+
+// footer
+
+footer{
+	.grid-container{
+		display: grid;
+    grid-template-columns: auto auto auto auto 224px;
+
+	h2{
+		text-transform: uppercase;
+		font-size: 14px;
+		margin-bottom: 10px;
+	}
+	p{
+		font-size: 14px;
+	}
+	ul{
+		list-style-type: none;
+	}
+	a{
+		text-decoration: none;
+		color: $primary-color;
+		font-size: 14px;
+	}
+		}
+}
+
+// Product Page
+
+.productpage{
+	.banner{
+		background-size: cover;
+		.container{
+			padding-top:104px;
+			height: 248px;
+			h1{
+				font-weight: normal;
+				font-size: 30px;
+				strong{
+					font-weight: 300;
+				}
+			}
+		}
+	}
+	.product-details{
+		.image{
+			width: 580px;
+			img{
+				width: 100%;
+				height: 650px;
+				object-fit: cover;
+				object-position: center buttom;
+			}
+			.arrows {
+				display: flex;
+				position: absolute;
+				height: 650px;
+				width: 497px;
+				justify-content: space-between;
+				align-items: center;
+			}
+		}
+		.details{
+			width: auto;
+			ul{
+				list-style-type: none;
+				justify-content: space-around;
+				width: 160px;
+				a{
+					color: $dark-gray;
+				}
+			}
+			a{
+				color: $main-color;
+				text-decoration: none;
+			}
+			p{
+				font-size: $unit-1;
+			}
+			h2{
+				font-weight: normal;
+				font-size: 18px;
+			}
+			.stars{
+				margin-top: 2px;
+		    color: #ded3aa;
+		    font-size: 12px;
+			}
+			.price{
+				div {
+					display: flex;
+					div{
+						margin-top: 5px;
+						font-size: 14px;
+					}
+				}
+			}
+			.oldPrice{
+					text-decoration: line-through;
+			}
+			.tags{
+				text-transform: capitalize;
+				div {
+					color: $main-color;
+					a{
+						margin-left: 5px;
+					}
+					&::after{
+						content: ',';
+						position: relative;
+					}
+					&:last-child::after{
+						content: '';
+						position: relative;
+					}
+				}
+			}
+			.detailed__content ul{
+				list-style-type: disc;
+				font-size: $unit-1;
+				list-style-position: inside;
+				width: 100%;
+			}
+		}
+	}
+	// Custom select
+	form{
+		select, .styled-adder button, p, span{
+			color: $dark-gray;
+		}
+		button {
+			@include hide-focus;
+		}
+		label{
+			font-size: 13px;
+		}
+		.styled-select, .styled-adder{
+			margin-top: 5px;
+		}
+		.styled-select {
+		  border: 1px solid #ccc;
+		  box-sizing: border-box;
+
+		  overflow: hidden;
+		  position: relative;
+		}
+		.styled-select, .styled-select select { width: 240px;}
+		select:focus { outline: none; }
+		.styled-select select {
+		  height: 38px;
+		  padding: 5px 0 5px 10px;
+		  background: transparent;
+		  border: none;
+		  /*hide default down arrow in webkit */
+		  -webkit-appearance: none;
+		}
+
+		@-moz-document url-prefix(){
+		  .styled-select select { width: auto; }
+		}
+
+		.styled-select .fa-chevron-down {
+			pointer-events: none;
+		  position: absolute;
+		  top: 10px;
+		  right: 12px;
+		  font-size: 15px;
+		}
+
+	 select::-ms-expand { display: none; } /* hide default down arrow in IE10*/
+
+		/* Apply in opera */
+		_:-o-prefocus, .selector {
+		  .styled-select { background: none; }
+		}
+
+		.styled-adder{
+			border: 1px solid #cccccc;
+			p {
+		    width: 31px;
+		    text-align: center;
+		    line-height: 35px;
+			}
+			div{
+				display: flex;
+				flex-direction: column;
+			}
+			button {
+		    width: 40px;
+		    height: 19px;
+		    border-radius: 0px;
+				border: none;
+				border-left: 1px solid #cccccc;
+				@include hide-focus;
+			}
+			button:nth-child(1){
+				border-bottom: 1px solid #cccccc;
+			}
+		}
+		.compare-el {
+			.compare {
+			    margin-top: -7px;
+					margin-left: -40px;
+			    position: absolute;
+			}
+			button{
+				border: none;
+				background-color: transparent;
+				padding-left: 40px;
+				margin-top: 25px;
+				letter-spacing: 2px;
+				font-family: 'montserrat', 'roboto';
+				transition: 0.3s;
+				&:hover{
+					color: $main-color;
+					.compare{
+						background-color: $main-color;
+					}
+				}
+			}
+		}
+	}
+
+}
