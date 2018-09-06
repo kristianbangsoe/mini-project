@@ -57,7 +57,7 @@
           <ul class="navbar-nav my-0 ml-auto">
             <li class="nav-item">
 
-              <router-link class="nav-link" to="/"><i class="fas fa-angle-down"></i>Homepage</router-link>
+              <router-link class="nav-link" to="/"><i class="fas fa-angle-down"></i>Men's</router-link>
               <div class="sub-container">
                 <div class="sub-cat">
                   <div class="d-flex">
@@ -89,13 +89,16 @@
               </div>
             </li>
             <li class="nav-item active">
-              <router-link class="nav-link" to="/brandpage">Brand</router-link>
+              <router-link class="nav-link" to="/brandpage">Women's</router-link>
+            </li>
+            <li class="nav-item active">
+              <router-link class="nav-link" to="/brandpage">The brand</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/productpage">Product</router-link>
+              <router-link class="nav-link" to="/productpage">Local Stories</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/signuppage">Sign up</router-link>
+              <router-link class="nav-link" to="/signuppage">Lookbook</router-link>
             </li>
             <li><form action="index.html" class="search" method="post">
               <input type="text" name="search" placeholder="Search..">
@@ -106,11 +109,10 @@
       </nav>
     </header>
 
-
     <section class="main-view container-fluid">
         <router-view/>
     </section>
-    <footer class="bg-light py-5 my-5">
+    <footer class="bg-light py-5 mt-5">
       <div class="container-s">
         <div class="grid-container">
           <div class="">
@@ -167,21 +169,6 @@
         </div>
       </div>
     </footer>
-    <form >
-      <div class="field">
-        <label class="label">Name</label>
-        <div class="control">
-          <input name="name"
-            v-model="form.name"
-            v-validate="'required|min:3'"
-            v-bind:class="{'is-danger': errors.has('name')}"
-            class="input" type="text" placeholder="Full name">
-        </div>
-        <p class="help is-danger" v-show="errors.has('name')">
-          {{ errors.first('name') }}
-        </p>
-      </div>
-    </form>
   </div>
 
 </template>

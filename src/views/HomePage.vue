@@ -22,20 +22,25 @@
           </ul>
         </div>
         <div class="product-collection columns my-3">
-          <figure v-for="product in products" :key="product.productId" class="item">
-            <div class="price-tag pt-1 ml-1">{{ product.price }} DKK</div>
-            <img :src="`${product.productImage}`" alt="">
-            <div class="label-container">
-              <div class="label">
-                <p class="pb-1">{{ product.productName}}</p>
-                <p>{{ product.description }}</p>
-                <div class="d-flex jf-center mt-1">
-                  <div class="icon compare"></div>
-                  <div class="icon-fa mx-1"><i class="fas fa-shopping-cart"></i></div>
-                  <div class="icon-fa"><i class="far fa-heart"></i></div>
+          <figure v-for="product in products" :key="product.id" class="item">
+            <router-link :to="{ name: 'product', params: { id: product.id }}">
+              <div class="info-i">
+                <i class="fas fa-info-circle"></i>
+              </div>
+              <div class="price-tag pt-1 ml-1">{{ product.price }} DKK</div>
+              <img :src="`${product.productImage}`" alt="">
+              <div class="label-container">
+                <div class="label">
+                  <p class="pb-1">{{ product.productName}}</p>
+                  <p>{{ product.description }}</p>
+                  <div class="d-flex jf-center mt-1">
+                    <div class="icon compare"></div>
+                    <div class="icon-fa mx-1"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="icon-fa"><i class="far fa-heart"></i></div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </router-link>
           </figure>
         </div>
         <hr class="my-5">
@@ -99,6 +104,8 @@ export default {
     }
   },
   mounted() {
+
+
     var element = document.getElementById("header");
     element.classList.remove("bg-white");
 
