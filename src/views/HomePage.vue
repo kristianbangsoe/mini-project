@@ -83,8 +83,8 @@
 </template>
 
 <script>
-import axios from 'axios';
-import jquery from '@jquery/dist/jquery.min.js';
+import axios from 'axios'
+import jquery from '@jquery/dist/jquery.min.js'
 export default {
 
   name: 'homepage',
@@ -106,31 +106,28 @@ export default {
   mounted() {
 
 
-    var element = document.getElementById("header");
-    element.classList.remove("bg-white");
+    var element = document.getElementById("header")
+    element.classList.remove("bg-white")
 
-    axios.get("static/products-data.json").then(response => (this.products = response.data));
+    axios.get("static/products-data.json").then(response => (this.products = response.data))
 
-    window.$ = jquery;
+    window.$ = jquery
     $(document).ready(function () {
       $(window).scroll(function() {
         // 100 = The point you would like to fade the nav in.
 
         if ($(window).scrollTop() > 100 ){
-          $('header').addClass('show');
+          $('header').addClass('show')
         } else {
-          $('header').removeClass('show');
-        };
-      });
-    });
+          $('header').removeClass('show')
+        }
+      })
+    })
 
   },
 
 }
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
-<style>
-
+<style
 </style>

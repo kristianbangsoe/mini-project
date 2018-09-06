@@ -1,5 +1,4 @@
 <template name='productpage'>
-
   <div v-if="product" class="productpage header">
     <section class="banner" v-bind:style="{ backgroundImage: 'url(' + heroImage + ')' }">
       <div class="overlay py-5">
@@ -122,20 +121,18 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
 export default {
   methods: {
     distract: function (counter) {
-      alert(counter-1)
-    },
+      alert(counter - 1)
+    }
   },
-  mounted() {
-    var element = document.getElementById("header");
-    element.classList.add("bg-white");
-    var routeName = this.$route.params.id;
-    axios.get('static/products-data.json')
-    .then(response => (this.product = response.data
-    .find(r => r.id === routeName)))
+  mounted () {
+    var element = document.getElementById('header')
+    element.classList.add('bg-white')
+    var routeName = this.$route.params.id
+    axios.get('static/products-data.json').then(response => (this.product = response.data.find(r => r.id === routeName)))
   },
   data () {
     return {
@@ -144,16 +141,12 @@ export default {
       counter: 1,
       quantity: 6,
       name: 'product',
-      tab: 1,
+      tab: 1
     }
   }
 }
 
-
 </script>
-
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
 </style>
